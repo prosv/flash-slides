@@ -44,7 +44,44 @@
 			#cover p a {
 				color: #FFF;
 			}
+
+			pre {
+				font-size: 23px;
+				/* margin-top: -25px; */
+			}
 		</style>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/devs.jpg" alt="">
+			<figcaption class="white">
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/futurewave_logo.png" alt="">
+			<figcaption class="white">
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/smartsketch.png" alt="">
+			<figcaption class="white">
+			</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/futuresplach.png" alt="">
+			<figcaption class="white">
+			</figcaption>
+		</figure>
 	</section>
 
 	<section class="slide">
@@ -87,13 +124,13 @@
 		</figure>
 	</section>
 
-	<section class="slide">
+	<!-- <section class="slide">
 		<figure>
 			<img class="cover" src="pictures/flashbithday.png" alt="">
 			<figcaption class="white">
 			</figcaption>
 		</figure>
-	</section>
+	</section> -->
 
 	<section class="slide">
 		<figure>
@@ -104,17 +141,22 @@
 	</section>
 
 	<section class="slide">
-		<h2>Крутой пример</h2>
+		<!-- <h2>Крутой пример</h2> -->
+		<figure>
+			<img class="cover" src="pictures/youtube.jpg" alt="">
+			<figcaption class="white">
+			</figcaption>
+		</figure>
 	</section>
 
 	<section class="slide">
 		<h2>Безопасность</h2>
-		<ul>
+		<!-- <ul>
 			<li>В классе ByteArray</li>
 			<li>В классе MovieClip</li>
 			<li>В классе TextField</li>
 			<li>В классе BitmapData</li>
-		</ul>
+		</ul> -->
 	</section>
 
 	<section class="slide">
@@ -219,6 +261,24 @@
 	</section>
 
 	<section class="slide">
+			<pre>
+					<code>import flash.events.Event;</code>
+					<code>import flash.events.ProgressEvent;</code>
+					<code>import flash.net.Socket;</code>
+					<code>   </code>
+					<code>var RFIDSocket:Socket = new Socket(RFIDSocketIP,RFIDSocketPort);</code>
+					<code>RFIDSocket.addEventListener(ProgressEvent.SOCKET_DATA, socketData);</code>
+			</pre>
+	</section>
+
+	<section class="slide">
+			<pre>
+					<code>var socket = new WebSocket(url);</code>
+					<code>socket.onopen = function() {}</code>
+			</pre>
+	</section>
+
+	<section class="slide">
 		<h2>Video/Audio streaming</h2>
 		<ul>
 			<li>Flash Media Server</li>
@@ -235,6 +295,24 @@
 	</section>
 
 	<section class="slide">
+			<pre>
+					<code>import flash.media.Camera;</code>
+					<code>var cam:Camera = Camera.getCamera();</code>
+					<code>var vid:Video = new Video(); </code>
+					<code>vid.attachCamera(cam);</code>
+					<code>addChild(vid);</code>
+			</pre>
+	</section>
+
+	<section class="slide">
+			<pre>
+					<code>navigator.mediaDevices.getUserMedia({ video: true, audio: true })</code>
+					<code>    .then(function(stream) { })</code>
+					<code>    .catch(function(err) { });</code>
+			</pre>
+	</section>
+
+	<section class="slide">
 		<h2>File selection</h2>
 		<ul>
 			<li>class FileReference</li>
@@ -243,11 +321,47 @@
 	</section>
 
 	<section class="slide">
+			<pre>
+					<code>import flash.net.FileReference;</code>
+					<code>var fileRef:FileReference = new FileReference();</code>
+					<code>button.addEventListener( MouseEvent.CLICK, browseForFile );</code>
+					<code>function browseForFile( e:Event ):void {</code>
+					<code>  var imgTypeFilter:FileFilter = </code>
+					<code>new FileFilter("Image Files (jpg,png)","*.jpg;*.png");</code>
+					<code>  var allTypeFilter:FileFilter = </code>
+					<code>new FileFilter("All Files (*.*)","*.*");</code>
+					<code>  fileRef.browse([imgTypeFilter,allTypeFilter]);</code>
+					<code>}</code>
+				
+			</pre>
+	</section>
+
+	<section class="slide">
+			<pre>
+					<code>var inputElement = document.getElementById("input");</code>
+					<code>inputElement.addEventListener("change", handleFiles, false);</code>
+					<code>function handleFiles() {</code>
+					<code>  var fileList = this.files;</code>
+					<code>}</code>
+			</pre>
+	</section>
+
+	<section class="slide">
 		<h2>Буфер обмена</h2>
 		<ul>
 			<li>Flash clipboard API</li>
 			<li>Selection API, execCommand API</li>
 		</ul>
+	</section>
+
+	<section class="slide">
+			<pre>
+					<code>import flash.desktop.Clipboard;</code>
+					<code>import flash.desktop.ClipboardFormats;</code>
+					<code>Clipboard.generalClipboard.clear();</code>
+					<code>Clipboard.generalClipboard.setData(ClipboardFormats.TEXT_FORMAT</code>
+					<code>	, text);</code>
+			</pre>
 	</section>
 
 	<section class="slide">
